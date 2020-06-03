@@ -112,7 +112,7 @@ export default {
     linktitle: {
       type: String,
       required: false,
-      default: '三重県公式ホームページ'
+      default: '広島市公式ホームページ'
     }
   }
 }

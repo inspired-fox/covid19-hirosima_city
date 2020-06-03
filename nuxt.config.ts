@@ -14,7 +14,7 @@ const config: Configuration = {
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate: '%s | 三重県 新型コロナウイルス感染症 情報まとめサイト',
+    titleTemplate: '%s | 広島市 新型コロナウイルス感染症 情報まとめサイト',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -22,12 +22,12 @@ const config: Configuration = {
         hid: 'description',
         name: 'description',
         content:
-          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、三重県内の有志で集まったチームが開発したものです。'
+          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するためのサイトです．'
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: '三重県 新型コロナウイルス感染症 情報まとめサイト'
+        content: '広島市 新型コロナウイルス感染症 情報まとめサイト'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -38,13 +38,13 @@ const config: Configuration = {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: '三重県 新型コロナウイルス感染症 情報まとめサイト'
+        content: '広島市 新型コロナウイルス感染症 情報まとめサイト'
       },
       {
         hid: 'og:description',
         property: 'og:description',
         content:
-          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、三重県の有志で集まったチームが開設したものです。'
+          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するためのサイトです．'
       },
       {
         hid: 'og:image',
@@ -176,8 +176,8 @@ const config: Configuration = {
     hardSource: process.env.NODE_ENV === 'development'
   },
   manifest: {
-    name: '三重県 新型コロナウイルス感染症 情報まとめサイト',
-    theme_color: '#ff8d5b',
+    name: '広島市 新型コロナウイルス感染症 情報まとめサイト',
+    theme_color: '#1e90ff',
     background_color: '#ffffff',
     display: 'standalone',
     Scope: '/',

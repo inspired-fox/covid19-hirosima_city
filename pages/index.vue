@@ -18,6 +18,16 @@
       </v-col>-->
 
       <v-col cols="12" md="6" class="DataCard">
+        <svg-card
+          title="検査陽性者の状況"
+          :title-id="'details-of-confirmed-cases'"
+          :date="Data.main_summary.date"
+          :url="'https://ckan.open-governmentdata.org/dataset/401307_covid19_totalpatients'"
+        >
+          <confirmed-cases-table v-bind="confirmedCases" />
+        </svg-card>
+      </v-col> 
+      <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="陽性患者が確認された件数"
           :title-id="'number-of-confirmed-cases'"
@@ -26,7 +36,7 @@
           :date="Data.patients.date"
           :unit="'件'"
           :url="'https://www.pref.mie.lg.jp/YAKUMUS/HP/m0068000066_00002.htm'"
-          :linktitle="'三重県公式ホームページ'"
+          :linktitle="'広島市公式ホームページ'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
@@ -38,7 +48,7 @@
           :date="Data.inspections_summary.date"
           :unit="'件'"
           :url="'https://www.pref.mie.lg.jp/IT/HP/87587000001_00002.htm'"
-          :linktitle="'三重県オープンデータライブラリ'"
+          :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
@@ -61,10 +71,9 @@
           :date="Data.patients.date"
           :info="sumInfoOfPatients"
           :url="'https://www.pref.mie.lg.jp/IT/HP/87587000001_00002.htm'"
-          :linktitle="'三重県オープンデータライブラリ'"
+          :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
-      <!--
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="新型コロナコールセンター相談件数"
@@ -76,6 +85,7 @@
           :url="''"
         />
       </v-col>
+      <!--
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="新型コロナ受診相談窓口相談件数"
@@ -114,11 +124,10 @@ import Data from '@/data/data.json'
 import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
-// import formatConfirmedCases from '@/utils/formatConfirmedCases'
+import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import News from '@/data/news.json'
-// import SvgCard from '@/components/SvgCard.vue'
-// import ConfirmedCasesTable from '@/components/ConfirmedCasesTable.vue'
-
+import SvgCard from '@/components/SvgCard.vue'
+import ConfirmedCasesTable from '@/components/ConfirmedCasesTable.vue'
 export default {
   components: {
     PageHeader,
@@ -126,9 +135,9 @@ export default {
     // MetroBarChart,
     WhatsNew,
     // StaticInfo,
-    DataTable
-    // SvgCard,
-    // ConfirmedCasesTable
+    DataTable,
+    SvgCard,
+    ConfirmedCasesTable
   },
   data() {
     // 感染者数グラフ
@@ -138,9 +147,8 @@ export default {
     const patientsTable = formatTable(Data.patients.data)
     // 退院者グラフ
     // const dischargesGraph = formatGraph(Data.discharges_summary.data)
-
     // 相談件数
-    // const contactsGraph = formatGraph(Data.contacts.data)
+    const contactsGraph = formatGraph(Data.contacts.data)
     // 帰国者・接触者電話相談センター相談件数
     // const querentsGraph = formatGraph(Data.querents.data)
     // 都営地下鉄の利用者数の推移
@@ -151,23 +159,20 @@ export default {
       Data.inspections_summary.data['その他']
     ]
     */
-
     const inspectionsGraph = formatGraph(Data.inspections_summary.data)
-
     /* const inspectionsItems = [
       '県内発生（疑い例・接触者調査）',
       'その他（チャーター便・クルーズ便）'
     ]
     */
-    // const inspectionsLabels = Data.inspections_summary.labels
+    const inspectionsLabels = Data.inspections_summary.labels
     // 死亡者数
     // #MEMO: 今後使う可能性あるので一時コメントアウト
     // const fatalitiesTable = formatTable(
     //   Data.patients.data.filter(patient => patient['備考'] === '死亡')
     // )
     // 検査陽性者の状況
-    // const confirmedCases = formatConfirmedCases(Data.main_summary)
-
+    const confirmedCases = formatConfirmedCases(Data.main_summary)
     const sumInfoOfPatients = {
       lText: patientsGraph[
         patientsGraph.length - 1
@@ -175,7 +180,6 @@ export default {
       sText: patientsGraph[patientsGraph.length - 1].label + 'までの累計',
       unit: '人'
     }
-
     const data = {
       Data,
       patientsTable,
@@ -183,18 +187,17 @@ export default {
       // 追加、現在の陽性患者数のグラフに必要なやつ
       nowpatientsGraph,
       // dischargesGraph,
-      // contactsGraph,
+      contactsGraph,
       // querentsGraph,
       // metroGraph,
       inspectionsGraph,
       // inspectionsItems,
       // inspectionsLabels,
-      // confirmedCases,
+      confirmedCases,
       sumInfoOfPatients,
-
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
-        title: '三重県内の最新感染動向',
+        title: '広島市内の最新感染動向',
         date: Data.lastUpdate
       },
       newsItems: News.newsItems
@@ -245,7 +248,6 @@ export default {
             label(tooltipItem, data) {
               const currentData = data.datasets[tooltipItem.datasetIndex]
               const percentage = `${currentData.data[tooltipItem.index]}%`
-
               return `${metroGraph.base_period}の利用者数との相対値: ${percentage}`
             }
           }
@@ -256,7 +258,7 @@ export default {
   },
   head() {
     return {
-      title: '三重県内の最新感染動向'
+      title: '広島市内の最新感染動向'
     }
   }
 }

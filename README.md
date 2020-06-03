@@ -1,9 +1,9 @@
-# 三重県 新型コロナウイルス感染症対策サイト
+# 広島市 新型コロナウイルス感染症対策サイト
 [![Mie Prefecture COVID-19 Task Force website](https://user-images.githubusercontent.com/47916753/76599982-6f25fd00-6549-11ea-9fcb-87034c0b68a5.png)](https://mie.stopcovid19.jp)
 
 ### 日本語 | [English](./README_EN.md) | [Spanish](./README_ES.md) | [Korean](./README_KO.md) | [Chinese (Taiwan)](./README_ZH_TW.md) | [Chinese (Simplified)](./README_ZH_CN.md)
 
-これは、三重県の高専生有志チームが開発した、東京都の新型コロナウイルス感染症対策サイトの三重版です。東京都新型コロナウイルス対策サイトのリポジトリからフォークしています。
+これは、三重県の高専生有志チームが開発した、東京都の新型コロナウイルス感染症対策サイトの広島市版です。東京都新型コロナウイルス対策サイトのリポジトリからフォークしています。
 
 ## ライセンス
 本ソフトウェアは、[MITライセンス](./LICENSE.txt)の元提供されています。
