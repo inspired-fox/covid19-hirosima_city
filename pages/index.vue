@@ -5,24 +5,20 @@
       :title="headerItem.title"
       :date="headerItem.date"
     />
+    <!--最新情報NEWsとか削除
     <whats-new class="mb-4" :items="newsItems" />
+    -->
+
     <v-row class="DataBlock">
-      <!--<v-col cols="12" md="6" class="DataCard">
-        <svg-card
-          title="検査陽性者の状況"
-          :title-id="'details-of-confirmed-cases'"
-          :date="Data.inspections_summary.date"
-        >
-          <confirmed-cases-table v-bind="confirmedCases" />
-        </svg-card>
-      </v-col>-->
+      
 
       <v-col cols="12" md="6" class="DataCard">
         <svg-card
           title="検査陽性者の状況"
           :title-id="'details-of-confirmed-cases'"
           :date="Data.main_summary.date"
-          :url="'https://ckan.open-governmentdata.org/dataset/401307_covid19_totalpatients'"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
+          :linktitle="'広島市オープンデータライブラリ'"
         >
           <confirmed-cases-table v-bind="confirmedCases" />
         </svg-card>
@@ -35,7 +31,7 @@
           :chart-data="patientsGraph"
           :date="Data.patients.date"
           :unit="'件'"
-          :url="'https://www.pref.mie.lg.jp/YAKUMUS/HP/m0068000066_00002.htm'"
+          :url="'https://www.city.hiroshima.lg.jp/site/korona/108656.html'"
           :linktitle="'広島市公式ホームページ'"
         />
       </v-col>
@@ -47,7 +43,7 @@
           :chart-data="inspectionsGraph"
           :date="Data.inspections_summary.date"
           :unit="'件'"
-          :url="'https://www.pref.mie.lg.jp/IT/HP/87587000001_00002.htm'"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
           :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
@@ -60,6 +56,8 @@
           :date="Data.nowinfectedperson.date"
           :unit="'人'"
           :show="false"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
+          :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
@@ -70,7 +68,7 @@
           :chart-option="{}"
           :date="Data.patients.date"
           :info="sumInfoOfPatients"
-          :url="'https://www.pref.mie.lg.jp/IT/HP/87587000001_00002.htm'"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
           :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
@@ -82,10 +80,11 @@
           :chart-data="contactsGraph"
           :date="Data.contacts.date"
           :unit="'件'"
-          :url="''"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
+          :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
-      <!--
+      <!--使用していないグラフ
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="新型コロナ受診相談窓口相談件数"
@@ -94,7 +93,8 @@
           :chart-data="querentsGraph"
           :date="Data.querents.date"
           :unit="'件'"
-          :url="''"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
+          :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">

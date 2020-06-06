@@ -6,7 +6,8 @@
     xmlns="http://www.w3.org/2000/svg"
     role="img"
     :aria-label="
-      ariaLabel(検査実施人数, 陽性物数, 入院中, 軽症中等症, 重症, 死亡, 退院)
+      /* ariaLabel(検査実施人数, 陽性物数, 入院中, 軽症中等症, 重症, 死亡, 退院) */
+      ariaLabel(検査実施人数, 陽性物数, 入院中, 死亡, 退院)
     "
   >
     <mask id="path-1-inside-1" fill="white">
@@ -135,14 +136,19 @@
       <tspan>{{ 入院中 }}</tspan>
       <tspan class="unit" dx="-3">人</tspan>
     </text>
+    <!--
     <text
       class="green text"
       transform="translate(157 100)"
       :dx="getAdjustX(軽症中等症)"
     >
+    -->
+    <!--
       <tspan>{{ 軽症中等症 }}</tspan>
       <tspan class="unit" dx="-3">人</tspan>
     </text>
+    -->
+    <!--
     <text
       class="green text"
       transform="translate(207 100)"
@@ -151,6 +157,7 @@
       <tspan>{{ 重症 }}</tspan>
       <tspan class="unit" dx="-3">人</tspan>
     </text>
+    -->
     <text
       class="green text"
       transform="translate(256 100)"
@@ -180,8 +187,8 @@ export default {
     '検査実施人数',
     '陽性物数',
     '入院中',
-    '軽症中等症',
-    '重症',
+    /*'軽症中等症',*/
+    /*'重症',*/
     '死亡',
     '退院'
   ],
@@ -212,12 +219,13 @@ export default {
       inspected,
       positive,
       hospitalized,
-      mild,
-      critically,
+      /*mild,
+      critically,*/
       deceased,
       discharged
     ) {
-      const ariaLabel = `検査陽性者の状況: 検査実施人数は${inspected}人、うち累積の陽性者数は${positive}人です。入院中は${hospitalized}人で、うち軽症・中等症は${mild}人、また重症は${critically}人です。さらに死亡は${deceased}人、退院は${discharged}人です。`
+      /*const ariaLabel = `検査陽性者の状況: 検査実施人数は${inspected}人、うち累積の陽性者数は${positive}人です。入院中は${hospitalized}人で、うち軽症・中等症は${mild}人、また重症は${critically}人です。さらに死亡は${deceased}人、退院は${discharged}人です。`*/
+      const ariaLabel = `検査陽性者の状況: 検査実施人数は${inspected}人、うち累積の陽性者数は${positive}人です。入院中は${hospitalized}人です．死亡は${deceased}人、退院は${discharged}人です。`
       return ariaLabel
     }
   }

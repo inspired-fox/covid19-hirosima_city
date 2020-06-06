@@ -286,6 +286,7 @@ $data['main_summary'] = [
         [
           'attr' => '入院中',
           'value' => $better_patients_summary['data']['感染者数']->sum() - $better_patients_summary['data']['退院者数']->sum() - $better_patients_summary['data']['死亡者数']->sum(),
+          /*
           'children' => [
             [
               'attr' => '軽症・中等症',
@@ -296,6 +297,7 @@ $data['main_summary'] = [
               'value' => $better_patients_summary['data']['重症']->sum()
             ]
           ]
+          */
         ],
         [
           'attr' => '退院',

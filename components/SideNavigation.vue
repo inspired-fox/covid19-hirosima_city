@@ -91,47 +91,72 @@ export default {
           title: this.$t('The latest updates'),
           link: '/'
         },
+        /* "お子様をお持ちの皆様へ"コメントアウト
         {
           icon: 'parent',
           title: this.$t('for Families with children'),
           link: '/parent'
         },
-        {
+        */
+
+        /* "市民の皆様へ"　コメントアウト
+        { 
           icon: 'mdi-account-multiple',
           title: this.$t('for Citizens'),
           link: 'https://www.pref.mie.lg.jp/YAKUMUS/HP/m0068000066.htm#006'
         },
+        */
+
+        /* "企業の皆様・はたらく皆様へ"コメントアウト 
         {
           icon: 'mdi-domain',
           title: this.$t('for Enterprises and Employees'),
           link: '/worker',
           divider: true
         },
+        */
+
+        /* "新型コロナウイルス感染症に係る県主催イベントの中止・延期情報"コメントアウト
         {
           title: this.$t('Ivents Info'),
           link: 'https://www.pref.mie.lg.jp/KI2KANRI/HP/m0101300022.htm'
         },
+        */
+        
+        /* "新型コロナウイルス感染症に係る県有施設の休館情報" コメントアウト
         {
           title: this.$t('Facility Info'),
           link: 'https://www.pref.mie.lg.jp/YAKUMUS/HP/m0068000067_00004.htm'
         },
+        */
+
+        /* "知事からのメッセージ" コメントアウト
         {
           title: this.$t('Message from Governor Suzuki'),
           link: 'https://www.pref.mie.lg.jp/YAKUMUS/HP/m0068000067_00006.htm'
         },
+        */
+
+
         {
           title: this.$t('About us'),
           link: '/about'
         },
+
+
         {
           title: this.$t('Government official website'),
-          link: 'https://www.pref.mie.lg.jp/'
+          link: 'https://www.city.hiroshima.lg.jp/index2.html'
         },
+
+        /* "公式LINE" コメントアウト
         {
           title: this.$t('Mie Coronavirus Countermeasures Official LINE'),
           link: 'https://www.pref.mie.lg.jp/YAKUMUS/HP/m0068000078.htm',
           divider: true
         },
+        */
+
         {
           title: this.$t('Other local government sites'),
           link:
