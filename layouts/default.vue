@@ -1,8 +1,9 @@
 <template>
   <v-app class="app">
     <div v-if="loading" class="loader">
-      <img src="/logo.png" alt="三重県" />
-      <scale-loader color="#ff8d5b" />
+      <!-- 最初のロード画面 -->
+      <img src="/logo-hiroshima-city.png" alt="三重県" />
+      <scale-loader color="#1e90ff" />
     </div>
     <div v-else class="appContainer">
       <div class="naviContainer">

@@ -37,11 +37,13 @@
           <v-divider v-show="item.divider" class="SideNavigation-Divider" />
         </v-container>
       </v-list>
+      <!--
       <div class="SideNavigation-HeadingDivider-Footer">
         <a href="https://www.sakura.ad.jp/">
           <img src="../static/sakura-image.png" alt="さくらインターネット" />
         </a>
       </div>
+      -->
     </div>
   </div>
 </template>
@@ -52,7 +54,7 @@
     "Navi Open": "サイドメニュー項目を開く",
     "Navi Close": "サイドメニュー項目を閉じる",
     "COVID-19": "新型コロナウイルス感染症",
-    "Measures site": "対策サイト（非公式）",
+    "Measures site": "対策サイト（公式）",
     "MiePrefecture": "広島市",
     "Tokyo COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
     "The latest updates": "市内の最新感染動向",

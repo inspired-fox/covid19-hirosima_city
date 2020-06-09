@@ -8,7 +8,7 @@
     "node": ">=10.19.0"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nuxt-ts",
+    "dev": "HOST=165.242.125.116 PORT=3333 nuxt-ts",
     "build": "nuxt-ts build",
     "start": "cross-env NODE_ENV=production nuxt-ts start",
     "generate:deploy": "nuxt-ts generate",
@@ -74,5 +74,9 @@
   "browserslist": [
     "defaults",
     "ie >=11"
-  ]
-}
+  ]  
+  }
+
+
+
+
