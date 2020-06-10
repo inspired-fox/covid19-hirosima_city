@@ -94,9 +94,9 @@
       をご確認ください。
     </TextCard>
     <TextCard title="お問い合わせ先（開発チームの連絡先です）">
-      広島市立大学大学院情報科学研究科　ネットワーク科学研究室　多々納　啓人　                                                         <br />
+      広島市立大学大学　ネットワーク科学研究室                                                         <br />
       メール
-      <a href="mailto:tatano@v6.netsci.info.hiroshima-cu.ac.jp">tatano@v6.netsci.info.hiroshima-cu.ac.jp</a>
+      <a href="mailto:stop_covid19@v6.netsci.info.hiroshima-cu.ac.jp">stop_covid19@v6.netsci.info.hiroshima-cu.ac.jp</a>
     </TextCard>
   </div>
 </template>
