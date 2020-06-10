@@ -1,5 +1,5 @@
 # 広島市 新型コロナウイルス感染症対策サイト
-# [![Mie Prefecture COVID-19 Task Force website](https://github.com/inspired-fox/covid19-hirosima_city/blob/develop/static/logo-hiroshima-city.png)](https://github.com/inspired-fox/covid19-hirosima_city)
+# [![Hiroshima Prefecture COVID-19 Task Force website](https://github.com/inspired-fox/covid19-hirosima_city/blob/develop/static/logo-hiroshima-city.png)](https://github.com/inspired-fox/covid19-hirosima_city)
 
 ### 日本語 | [English](./README_EN.md) | [Spanish](./README_ES.md) | [Korean](./README_KO.md) | [Chinese (Taiwan)](./README_ZH_TW.md) | [Chinese (Simplified)](./README_ZH_CN.md)
 

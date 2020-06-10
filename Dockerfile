@@ -8,7 +8,7 @@ RUN yarn install
 
 COPY . ./app
 
-EXPOSE 3000
+EXPOSE 3001
 ENV HOST 0.0.0.0
 
 CMD ["yarn", "dev"]
