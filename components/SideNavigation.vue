@@ -68,6 +68,7 @@
     "Facility Info": "新型コロナウイルス感染症に係る県有施設の休館情報",
     "Other local government sites":"他自治体の対策サイト",
     "Mie Coronavirus Countermeasures Official LINE":"三重県コロナウイルス対策公式LINE"
+    "About Covid19 info":"新型コロナウイルス感染症に関する情報"
   }
 }
 </i18n>
@@ -145,10 +146,15 @@ export default {
           link: '/about'
         },
 
-
+        
         {
           title: this.$t('Government official website'),
-          link: 'https://www.city.hiroshima.lg.jp/index2.html'
+          link: 'https://www.city.hiroshima.lg.jp/'
+        },
+
+        {
+          title: this.$t('About Covid19 info'),
+          link: 'https://www.city.hiroshima.lg.jp/site/korona/'
         },
 
         /* "公式LINE" コメントアウト
