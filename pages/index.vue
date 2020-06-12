@@ -12,45 +12,20 @@
           :title-id="'details-of-confirmed-cases'"
           :date="Data.main_summary.date"
           :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
-          :linktitle="'広島市公式ホームページ'"
+          :linktitle="'広島市オープンデータライブラリ'"
         >
           <confirmed-cases-table v-bind="confirmedCases" />
         </svg-card>
       </v-col> 
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="陽性患者が確認された件数"
+          title="陽性患者数"
           :title-id="'number-of-confirmed-cases'"
           :chart-id="'time-bar-chart-patients'"
           :chart-data="patientsGraph"
           :date="Data.patients.date"
           :unit="'件'"
           :url="'https://www.city.hiroshima.lg.jp/site/korona/108656.html'"
-          :linktitle="'広島市公式ホームページ'"
-        />
-      </v-col>
-      <v-col cols="12" md="6" class="DataCard">
-        <time-bar-chart
-          title="検査実施数"
-          :title-id="'number-of-tested-cases'"
-          :chart-id="'time-bar-chart-tested'"
-          :chart-data="inspectionsGraph"
-          :date="Data.inspections_summary.date"
-          :unit="'件'"
-          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
-          :linktitle="'広島市オープンデータライブラリ'"
-        />
-      </v-col>
-      <v-col cols="12" md="6" class="DataCard">
-        <time-bar-chart
-          title="日別の陽性患者数"
-          :title-id="'nownumber-of-confirmed-cases'"
-          :chart-id="'time-bar-chart-nowpatients'"
-          :chart-data="nowpatientsGraph"
-          :date="Data.nowinfectedperson.date"
-          :unit="'人'"
-          :show="false"
-          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
           :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
@@ -68,7 +43,19 @@
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="新型コロナコールセンター相談件数"
+          title="検査実施数"
+          :title-id="'number-of-tested-cases'"
+          :chart-id="'time-bar-chart-tested'"
+          :chart-data="inspectionsGraph"
+          :date="Data.inspections_summary.date"
+          :unit="'件'"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
+          :linktitle="'広島市オープンデータライブラリ'"
+        />
+      </v-col>
+      <v-col cols="12" md="6" class="DataCard">
+        <time-bar-chart
+          title="相談件数"
           :title-id="'number-of-reports-to-covid19-telephone-advisory-center'"
           :chart-id="'time-bar-chart-contacts'"
           :chart-data="contactsGraph"
