@@ -2,6 +2,7 @@
   <data-view class="SvgCard" :title="title" :title-id="titleId" :date="date">
     <template v-slot:button>
       <p class="Graph-Desc">
+         (注)入院等には自宅待機中の方などを含む.
       </p>
     </template>
     <slot />
