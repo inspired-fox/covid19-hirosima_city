@@ -6,6 +6,7 @@
       </p>
     </template>
     <slot />
+  </v-card-text>
   </data-view>
 </template>
 
