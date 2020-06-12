@@ -11,7 +11,7 @@
           title="検査陽性者の状況"
           :title-id="'details-of-confirmed-cases'"
           :date="Data.main_summary.date"
-          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/163477.html'"
           :linktitle="'広島市オープンデータライブラリ'"
         >
           <confirmed-cases-table v-bind="confirmedCases" />
@@ -25,7 +25,7 @@
           :chart-data="patientsGraph"
           :date="Data.patients.date"
           :unit="'件'"
-          :url="'https://www.city.hiroshima.lg.jp/site/korona/108656.html'"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/163477.html'"
           :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
@@ -37,7 +37,7 @@
           :chart-option="{}"
           :date="Data.patients.date"
           :info="sumInfoOfPatients"
-          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/163477.html'"
           :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
@@ -49,7 +49,7 @@
           :chart-data="inspectionsGraph"
           :date="Data.inspections_summary.date"
           :unit="'件'"
-          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/163477.html'"
           :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
@@ -61,7 +61,7 @@
           :chart-data="contactsGraph"
           :date="Data.contacts.date"
           :unit="'件'"
-          :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
+          :url="'https://www.city.hiroshima.lg.jp/site/opendata/163477.html'"
           :linktitle="'広島市オープンデータライブラリ'"
         />
       </v-col>
