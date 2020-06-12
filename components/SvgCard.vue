@@ -1,8 +1,9 @@
 <template>
-  <data-view class="SvgCard" :title="title" :title-id="titleId" :date="date">
+  <data-view class="SvgCard" :title="title" :title-id="titleId" :date="date" :url="url">
     <template v-slot:button>
       <p class="Graph-Desc">
-         (注)入院等には自宅待機中の方などを含む.
+         (注)入院等には自宅待機中の方などを含む<br />
+         <br />
       </p>
     </template>
     <slot />
