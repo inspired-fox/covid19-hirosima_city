@@ -4,21 +4,15 @@
       :icon="headerItem.icon"
       :title="headerItem.title"
       :date="headerItem.date"
-    />
-    <!--最新情報NEWsとか削除
-    <whats-new class="mb-4" :items="newsItems" />
-    -->
 
     <v-row class="DataBlock">
-      
-
       <v-col cols="12" md="6" class="DataCard">
         <svg-card
           title="検査陽性者の状況"
           :title-id="'details-of-confirmed-cases'"
           :date="Data.main_summary.date"
           :url="'https://www.city.hiroshima.lg.jp/site/opendata/40134.html'"
-          :linktitle="'広島市オープンデータライブラリ'"
+          :linktitle="'広島市公式ホームページ'"
         >
           <confirmed-cases-table v-bind="confirmedCases" />
         </svg-card>
