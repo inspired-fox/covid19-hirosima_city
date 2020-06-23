@@ -1,4 +1,5 @@
 import { Configuration } from '@nuxt/types'
+import fs from 'fs'
 const path = require('path')
 const purgecss = require('@fullhuman/postcss-purgecss')
 const autoprefixer = require('autoprefixer')
@@ -160,6 +161,7 @@ const config: Configuration = {
       plugins: [
         autoprefixer({ grid: 'autoplace' }),
         purgecss({
+        enabled:  process.env.NODE_ENV == 'production' ? true : false,
           content: [
             './pages/**/*.vue',
             './layouts/**/*.vue',
@@ -173,7 +175,14 @@ const config: Configuration = {
       ]
     },
     // https://ja.nuxtjs.org/api/configuration-build/#hardsource
-    hardSource: process.env.NODE_ENV === 'development'
+    //hardSource: process.env.NODE_ENV === 'development'
+    hardSource: true
+  },
+  server: {
+    https: {
+      key: fs.readFileSync('server/mysslserver.key'),
+      cert: fs.readFileSync('server/mysslserver.crt')
+    }
   },
   manifest: {
     name: '広島市 新型コロナウイルス感染症 情報まとめサイト',
@@ -196,5 +205,4 @@ const config: Configuration = {
     }
   }
 }
-
 export default config

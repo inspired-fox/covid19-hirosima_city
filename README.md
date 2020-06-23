@@ -32,4 +32,3 @@ $ docker-compose up --build
 ### ステージング・本番環境への反映
 
 `master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://mie.stopcovid19.jp が更新されます。  
-`develop`ブランチがアップデートされると、自動的に`dev_pages`ブランチにHTML類がbuildされます。そして、開発用サイト https://covid19-mie-dev.netlify.com/ が更新されます。

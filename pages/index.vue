@@ -5,6 +5,11 @@
       :title="headerItem.title"
       :date="headerItem.date"
 
+     <Whats-new
+      class="mb-4"
+      url="http://www.netsci.info.hiroshima-cu.ac.jp/"
+      :text="$t('提供：広島市立大学　ネットワーク科学研究室')"
+    />
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
         <svg-card
@@ -43,7 +48,7 @@
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
-          title="検査実施数"
+          title="検査実施件数"
           :title-id="'number-of-tested-cases'"
           :chart-id="'time-bar-chart-tested'"
           :chart-data="inspectionsGraph"

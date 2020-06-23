@@ -1,6 +1,5 @@
-# Mie Prefecture COVID-19 Task Force website
-
-[![Mie Prefecture COVID-19 Task Force website](https://user-images.githubusercontent.com/47916753/76599982-6f25fd00-6549-11ea-9fcb-87034c0b68a5.png)](https://mie.stopcovid19.jp)
+#The City of Hiroshima's COVID-19 task force website
+# [![COVID-19 Task Force website](https://github.com/inspired-fox/covid19-hirosima_city/blob/develop/static/logo-hiroshima-city.png)](https://github.com/inspired-fox/covid19-hirosima_city)
 
 ### [日本語](./README.md) | English | [Spanish](./README_ES.md) | [Korean](./README_KO.md) | [Chinese (Taiwan)](./README_ZH_TW.md) | [Chinese (Simplified)](./README_ZH_CN.md)
 
@@ -40,7 +39,5 @@ $ docker-compose up --build
 ### Deployment to Staging & Production Environments
 
 When `master` branch is updated, the HTML files will be automatically built onto `production` branch,
-and then the production site (https://mie.stopcovid19.jp) will be also updated.  
-When `develop` branch is updated, the HTML files will be automatically built onto `dev_pages` branch,
-and then the production site (https://covid19-mie-dev.netlify.com/) will be also updated.  
+and then the production site (https://stopcovid19-hiroshima-city.hiroshima-cu.ac.jp) will be also updated.  
 
