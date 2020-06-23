@@ -93,7 +93,9 @@ sw.*
 
 # Netlify
 .netlify
-server
+
+#
+server/
 README_ES.md
 README_KO.md
 README_ZH_CN.md
