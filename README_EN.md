@@ -1,7 +1,7 @@
 #The City of Hiroshima's COVID-19 task force website
 # [![COVID-19 Task Force website](https://github.com/inspired-fox/covid19-hirosima_city/blob/develop/static/logo-hiroshima-city.png)](https://github.com/inspired-fox/covid19-hirosima_city)
 
-### [日本語](./README.md) | English | [Spanish](./README_ES.md) | [Korean](./README_KO.md) | [Chinese (Taiwan)](./README_ZH_TW.md) | [Chinese (Simplified)](./README_ZH_CN.md)
+### [日本語](./README.md) | English 
 
 ## How to Contribute
 
